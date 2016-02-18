@@ -1,0 +1,7 @@
+#Turn rewrite engine on
+Options +FollowSymlinks
+RewriteEngine on
+
+# map neat URL to internal URL
+RewriteRule ^([a-zA-Z_-]*)$ webServiceRest.php?accion=$1 [nc,qsa]
+#RewriteRule ^mobile/list/([0-9]+)/$   webServiceRest.php?view=single&id=$1 [nc,qsa]
